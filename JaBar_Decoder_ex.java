@@ -53,6 +53,7 @@ public class JaBar_Decoder_ex {
 		}
 		**/
 		
+		//first one decoding (method would not work)
 		System.out.println("Enter the first encoded number");
 		decoding = one.nextInt();
 		
@@ -137,13 +138,13 @@ public class JaBar_Decoder_ex {
 			message.add("Z");
 		}
 		
-		
+		//second one decoding
 		while (cont=true) {
 		System.out.println("Full encoded message is "+encodedmsg);
-		System.out.println("Enter another number to keep decoding, or enter (4444) to decrypt");
+		System.out.println("Enter another number to keep decoding, or enter (2222) to decrypt");
 		decoding = one.nextInt();
 		
-		if (decoding == (4444)) {
+		if (decoding == (2222)) {
 			cont=false;
 			System.out.println("decrypting...");
 			System.out.println(message);
@@ -152,7 +153,7 @@ public class JaBar_Decoder_ex {
 		}
 		
 		else {
-		step1 = ((decoding/encrypter)-s_encrypter);//its not easier to make it a method trust me
+		step1 = ((decoding/encrypter)-s_encrypter);//method would not be better here
 		
 		if (step1 == 3){
 			message.add("A");
@@ -237,7 +238,7 @@ public class JaBar_Decoder_ex {
 		}
 	}
 	
-	public static void decrypt(int decoding, int encrypter, int s_encrypter) {
+	//public static void decrypt(int decoding, int encrypter, int s_encrypter) {
 		//pre
 		/**
 		int step1 = 0;
@@ -248,5 +249,6 @@ public class JaBar_Decoder_ex {
 		step1 = ((decoding/encrypter)-s_encrypter);
 		**/
 		
+		
 	}
-}
+
